@@ -390,7 +390,7 @@ LIBECS_DM_CLASS( MitochondriaAssignmentProcess, Process )
 		_ATPmitEffect  = _SubstrateEffect( _Km_ATPmit_h,  ATPtmit->getMolarConc() );
 		_ADPmitEffect  = _SubstrateEffect( _Km_ADPmit_h,  ADPtmit->getMolarConc() );
 
-		_ANPtotalEffect = _ATPcellEffect * _ADPcellEffect * _ATPmitEffect * _ANPtotalEffect;
+		_ANPtotalEffect = _ATPcellEffect * _ADPcellEffect * _ATPmitEffect * _ADPmitEffect;
 
 		_kC4 = kC4_0 / (1.0 + pow( CN->getMolarConc() / 0.12e-3, 5.0 ));
 		_vC4 = Amp * ( _kC4 / ( 1.0 + pow( CN->getMolarConc() / KmC4, nC4 ))) * ( Cyta2->getMolarConc() * 1000.0 ) * ( Cytc2->getMolarConc() * 1000.0 ) * ( O2->getMolarConc() / ( O2->getMolarConc() + KmOC4 )) * _Cytc3Effect * _ProtonEffect;
