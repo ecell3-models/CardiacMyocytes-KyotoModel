@@ -120,6 +120,8 @@ LIBECS_DM_CLASS( IsotonicContractionAssignmentProcess, Process )
 		//cbFactor  = getVariableReference( "cbFactor" ).getVariable();
 		qd1       = getVariableReference( "qd1" ).getVariable();
 		qd2       = getVariableReference( "qd2" ).getVariable();
+		FEcomp    = getVariableReference( "FEcomp" ).getVariable();
+		FCB       = getVariableReference( "FCB" ).getVariable();
 
 		// 以下、筋収縮の代数方程式求根
 
@@ -281,6 +283,8 @@ LIBECS_DM_CLASS( IsotonicContractionAssignmentProcess, Process )
 		qd->setValue( _qd );
 		qd1->setValue( _qd1 );
 		qd2->setValue( _qd2 );
+		FEcomp->setValue( 140000 * gsl_pow_5( 0.97 - _L ) + 200.0 * ( 0.97 - _L ) );
+		FCB->setValue( 3.06e+9 * ( TCaCB->getMolarConc() + TCB->getMolarConc() ) * _CBL );
 
 	}
 
@@ -310,6 +314,8 @@ LIBECS_DM_CLASS( IsotonicContractionAssignmentProcess, Process )
 	//Variable* cbFactor;
 	Variable* qd1;
 	Variable* qd2;
+	Variable* FEcomp;
+	Variable* FCB;
 
 	Real B;  // 1.2
 	Real hc;  // 0.005

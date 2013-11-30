@@ -1238,7 +1238,7 @@ System System( /CELL/CYTOPLASM )
 	
 	Variable Variable( crossBridgeLength )
 	{
-		Name "Cross Bridge Length";
+		Name "Cross Bridge Length (um)";
 		Value 0.005009947075106269;
 	}
 

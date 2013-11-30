@@ -20,13 +20,13 @@ System System( /CELL/CYTOPLASM/Contraction )
 
 	Variable Variable( qb )
 	{
-		Name  "Q1"
+		Name  "Q1";
 		Value 11682.9802486;
 	}
 
 	Variable Variable( qa1 )
 	{
-		Name  "1st term of Q2"
+		Name  "1st term of Q2";
 		Value 27934.9978915;
 	}
 
@@ -37,19 +37,19 @@ System System( /CELL/CYTOPLASM/Contraction )
 
 	Variable Variable( qa2 )
 	{
-		Name  "2nd term of Q2"
+		Name  "2nd term of Q2";
 		Value 3020.27474759;
 	}
 
 	Variable Variable( qr )
 	{
-		Name  "Q3"
+		Name  "Q3";
 		Value 25998.2753404;
 	}
 
 	Variable Variable( qd )
 	{
-		Name  "1st term of Q4"
+		Name  "1st term of Q4";
 		Value 26291.9677744;
 	}
 
@@ -60,14 +60,27 @@ System System( /CELL/CYTOPLASM/Contraction )
 
 	Variable Variable( qd1 )
 	{
-		Name  "2nd term of Q4"
+		Name  "2nd term of Q4";
 		Value 0.00499476562636;
 	}
 
 	Variable Variable( qd2 )
 	{
-		Name  "Q5"
+		Name  "Q5";
 		Value 0.0176544874505;
+	}
+
+	Variable Variable( ForceEcomp )
+	{
+		Name  "elastic component of force (mN/mm^2)";
+		Value 1.6473391396703203;
+	}
+
+	Variable Variable( ForceCB )
+	{
+		Name  "cross-bridge force (mN/mm^2)";
+		
+		Value 1.6473391396703374;
 	}
 
 	Process IsotonicContractionAssignmentProcess( IsotonicContractionAssignment ) 
@@ -102,7 +115,9 @@ System System( /CELL/CYTOPLASM/Contraction )
 			[ qd        :.:qd                    1 ]
 			[ cbFactor  :.:cbFactor              0 ]
 			[ qd1       :.:qd1                   1 ]
-			[ qd2       :.:qd2                   1 ];
+			[ qd2       :.:qd2                   1 ]
+			[ FEcomp    :.:ForceEcomp            1 ]
+			[ FCB       :.:ForceCB               1 ];
 
 		B          1.2;                    # turn over rate of cross bridge sliding 1200/s=1200/1000ms=1.2/ms
 		hc         0.005;                  # lower limit of cross bridge lendgth 0.005 um
@@ -135,7 +150,7 @@ System System( /CELL/CYTOPLASM/Contraction )
 
 	Process ZeroVariableAsFluxProcess( crossBridgeLength_X ) 
 	{
-		Name "Cross Bridge Length";
+		Name "Cross Bridge Length (um)";
 
 		Priority	15;
 
