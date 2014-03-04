@@ -27,7 +27,7 @@ Iha_permeabilityNa = {
 
 System System(/CELL/MEMBRANE/Iha)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

@@ -4,7 +4,7 @@ IClb_I = -0.5756468538907918
 
 System System(/CELL/MEMBRANE/IClb)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

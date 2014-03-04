@@ -15,7 +15,7 @@ INaK_amp = {
 
 System System(/CELL/MEMBRANE/INaK)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 
 	Variable Variable( I )

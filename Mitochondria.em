@@ -55,7 +55,7 @@ Cytoplasm_ADPtotal = 3.6781238986170604e-5
 
 System System( /CELL/CYTOPLASM/MITOCHONDRIA )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	@{'''
 	<volume me="volume" initial_value="3531.2679767719696" units="um^3">

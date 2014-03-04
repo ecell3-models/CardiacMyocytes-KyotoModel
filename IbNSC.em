@@ -25,7 +25,7 @@ IbNSC_permeabilityNa = {
 
 System System(/CELL/MEMBRANE/IbNSC)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

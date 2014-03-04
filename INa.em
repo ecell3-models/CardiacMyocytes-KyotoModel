@@ -22,7 +22,7 @@ INa_permeabilityNa = {
 
 System System(/CELL/MEMBRANE/INa)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

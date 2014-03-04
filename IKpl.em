@@ -13,7 +13,7 @@ IKpl_amp = {
 
 System System(/CELL/MEMBRANE/IKpl)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

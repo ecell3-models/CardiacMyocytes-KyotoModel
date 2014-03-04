@@ -14,7 +14,7 @@ Cab_permeabilityCa = {
 
 System System(/CELL/MEMBRANE/ICab)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

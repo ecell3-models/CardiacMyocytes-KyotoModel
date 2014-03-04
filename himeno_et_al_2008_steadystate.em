@@ -398,7 +398,7 @@ def setCurrents( totalCurrent, *eachCurrent ):
 @# 連続Stepperの名称は「ODE」中身は切り替え可能
 
 Stepper FixedODE1Stepper( ODE ){ StepInterval   @StepInterval; }
-#Stepper ODEStepper( ODE ){}
+Stepper ODEStepper( ODE2 ){}
 #Stepper ODE45Stepper( ODE ){}
 
 @# 離散イベントはPassiveStepper「PSV」で処理。これでほとんど問題ないはず
@@ -412,7 +412,7 @@ Stepper PassiveStepper( PSV ){}
 
 System System( / )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	@# <variable name="volume" initial_value="1.28E7" units="um^3" />
 
@@ -629,7 +629,7 @@ System System( / )
 
 #	Process ExpressionFluxProcess( Dummy ) 
 #	{
-#		StepperID	ODE;
+#		StepperID	ODE2;
 #
 #		Name "Dummy Process for ODE";
 #
@@ -645,14 +645,14 @@ System System( / )
 
 System System( /CELL )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 }
 
 @# 細胞質
 
 System System( /CELL/CYTOPLASM )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( SIZE )
 	{
@@ -1530,7 +1530,7 @@ System System( /CELL/CYTOPLASM )
 @# 細胞膜
 System System( /CELL/MEMBRANE )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	@# 10^-15 * Jx * zx * F / N_A / Cm (V/sec)
 	Variable Variable( Vm )
@@ -1692,7 +1692,7 @@ System System( /CELL/MEMBRANE )
 
 System System( /CELL/CYTOPLASM/SRREL )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( SIZE )
 	{
@@ -1746,7 +1746,7 @@ System System( /CELL/CYTOPLASM/SRREL )
 
 System System( /CELL/CYTOPLASM/SRUP )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( SIZE )
 	{
@@ -1813,7 +1813,7 @@ System System( /CELL/CYTOPLASM/SRUP )
 '''}
 System System( /CELL/CYTOPLASM/SEPARATOR )
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 #	Variable Variable( SIZE )
 #	{

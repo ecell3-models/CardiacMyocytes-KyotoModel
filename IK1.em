@@ -15,7 +15,7 @@ IK1_amp = {
 
 System System(/CELL/MEMBRANE/IK1)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

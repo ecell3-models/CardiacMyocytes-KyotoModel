@@ -26,7 +26,7 @@ Version 0.2 2008-11-30 04:57:04 +0900
 
 System System(/CELL/MEMBRANE/IVRCC)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

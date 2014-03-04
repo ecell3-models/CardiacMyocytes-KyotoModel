@@ -14,7 +14,7 @@ leak_permeabilityCa = {
 
 System System(/CELL/CYTOPLASM/SRUP/leak)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

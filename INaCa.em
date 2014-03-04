@@ -18,7 +18,7 @@ INaCa_amp = {
 
 System System(/CELL/MEMBRANE/INaCa)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 
 	Variable Variable( I )

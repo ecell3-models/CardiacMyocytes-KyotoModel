@@ -15,7 +15,7 @@ ISRCA_amp = {
 
 System System(/CELL/CYTOPLASM/SRUP/ISRCA)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

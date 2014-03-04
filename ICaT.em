@@ -16,7 +16,7 @@ ICaT_permeabilityCa = {
 
 System System(/CELL/MEMBRANE/ICaT)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

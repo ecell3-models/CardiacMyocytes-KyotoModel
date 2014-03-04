@@ -17,7 +17,7 @@ IKr_amp = {
 
 System System(/CELL/MEMBRANE/IKr)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

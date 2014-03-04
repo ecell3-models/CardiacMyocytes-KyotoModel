@@ -17,7 +17,7 @@ IRyR_permeabilityCa = {
 
 System System(/CELL/CYTOPLASM/SRREL/IRyR)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

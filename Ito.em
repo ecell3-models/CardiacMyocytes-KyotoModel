@@ -14,7 +14,7 @@ Ito_permeabilityK = {
 
 System System(/CELL/MEMBRANE/Ito)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 
 	Variable Variable( I )

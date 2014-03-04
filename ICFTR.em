@@ -18,7 +18,7 @@ Version 0.2 2008-11-30 05:05:29 +0900
 
 System System(/CELL/MEMBRANE/ICFTR)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

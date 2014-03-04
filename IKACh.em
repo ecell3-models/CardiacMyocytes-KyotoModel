@@ -22,7 +22,7 @@ GKACh = {
 
 System System(/CELL/MEMBRANE/IKACh)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

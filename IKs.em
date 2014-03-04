@@ -36,7 +36,7 @@ def IKs_setKCNQ1pProcessVariableReference():
 
 System System(/CELL/MEMBRANE/IKs)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

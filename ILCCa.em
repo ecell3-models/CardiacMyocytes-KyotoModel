@@ -15,7 +15,7 @@ ILCCa_permeabilityNa = {
 
 System System(/CELL/MEMBRANE/ILCCa)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

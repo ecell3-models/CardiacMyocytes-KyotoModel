@@ -7,7 +7,7 @@ IPMCA_gate = 0.47231826638070495
 
 System System(/CELL/MEMBRANE/IPMCA)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 
 	Variable Variable( I )

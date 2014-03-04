@@ -17,7 +17,7 @@ IKATP_amp = {
 
 System System(/CELL/MEMBRANE/IKATP)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

@@ -16,7 +16,7 @@ Version 0.1 2008-12-05 01:41:34 +0900
 
 System System(/Pipette)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 
 	Variable Variable( I )

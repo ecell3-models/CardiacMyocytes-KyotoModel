@@ -29,7 +29,7 @@ ICaL_permeabilityCa = {
 
 System System(/CELL/MEMBRANE/ICaL)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

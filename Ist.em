@@ -28,7 +28,7 @@ Ist_permeabilityK = {
 
 System System(/CELL/MEMBRANE/Ist)
 {
-	StepperID	ODE;
+	StepperID	ODE2;
 
 	Variable Variable( I )
 	{

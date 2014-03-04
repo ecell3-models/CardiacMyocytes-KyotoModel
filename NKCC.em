@@ -13,7 +13,7 @@ NKCC_P = {
 
 System System(/CELL/MEMBRANE/NKCC)
 {
-	StepperID       ODE;
+	StepperID       ODE2;
 
 	Variable Variable( ClFlux )  # = cCl
 	{
