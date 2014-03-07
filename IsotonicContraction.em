@@ -3,6 +3,18 @@ System System( /CELL/CYTOPLASM/Contraction )
 {
 	StepperID	ODE;
 
+	Variable Variable( dLdt )
+	{
+		Name "derivative value of the half sarcomere length";
+		Value 0.0;
+	}
+
+	Variable Variable( d2Ldt2 )
+	{
+		Name "acceleration value of the half sarcomere length";
+		Value 0.0;
+	}
+
 	Variable Variable( X )
 	{
 		Name "half length of thick filament + thin filament length over the non-overlap zone";
@@ -70,19 +82,6 @@ System System( /CELL/CYTOPLASM/Contraction )
 		Value 0.0176544874505;
 	}
 
-	Variable Variable( ForceEcomp )
-	{
-		Name  "elastic component of force (mN/mm^2)";
-		Value 1.6473391396703203;
-	}
-
-	Variable Variable( ForceCB )
-	{
-		Name  "cross-bridge force (mN/mm^2)";
-		
-		Value 1.6473391396703374;
-	}
-
 	Process IsotonicContractionAssignmentProcess( IsotonicContractionAssignment ) 
 	{
 		Name "Isotonic Contraction Assignment";
@@ -91,7 +90,8 @@ System System( /CELL/CYTOPLASM/Contraction )
 		Priority	20;
 
 		VariableReferenceList
-			[ L         :..:halfSarcomereLength  1 ]
+			[ L         :..:halfSarcomereLength  0 ]
+			[ d2Ldt2    :.:d2Ldt2                1 ]
 			[ X         :.:X                     0 ]
 			[ CBL       :..:crossBridgeLength    1 ]
 			#[ h        :..:crossBridgeLength    0 ]
@@ -115,14 +115,13 @@ System System( /CELL/CYTOPLASM/Contraction )
 			[ qd        :.:qd                    1 ]
 			[ cbFactor  :.:cbFactor              0 ]
 			[ qd1       :.:qd1                   1 ]
-			[ qd2       :.:qd2                   1 ]
-			[ FEcomp    :.:ForceEcomp            1 ]
-			[ FCB       :.:ForceCB               1 ];
+			[ qd2       :.:qd2                   1 ];
 
 		B          1.2;                    # turn over rate of cross bridge sliding 1200/s=1200/1000ms=1.2/ms
 		hc         0.005;                  # lower limit of cross bridge lendgth 0.005 um
 
 		A          3.06e+6;                # force of cross bridge and parallel elastic comp.
+		m_L        100.0;
 		L0         0.97;
 		K          140000;
 		Kl         200;
@@ -148,9 +147,34 @@ System System( /CELL/CYTOPLASM/Contraction )
 		Yd         8000.0;
 	}
 
+
+	Process ZeroVariableAsFluxProcess( d_hSML_dt ) 
+	{
+		Name "derivative value of the half sarcomere length";
+
+		Priority	16;
+
+		VariableReferenceList
+			[ d2Ldt2 :.:d2Ldt2  0 ]
+			[ dLdt   :.:dLdt    1 ];
+	}
+
+
+	Process ZeroVariableAsFluxProcess( hSML ) 
+	{
+		Name "the half sarcomere length";
+
+		Priority	15;
+
+		VariableReferenceList
+			[ dLdt :.:dLdt                  0 ]
+			[ L    :..:halfSarcomereLength  1 ];
+	}
+
+
 	Process ZeroVariableAsFluxProcess( crossBridgeLength_X ) 
 	{
-		Name "Cross Bridge Length (um)";
+		Name "Cross Bridge Length";
 
 		Priority	15;
 
