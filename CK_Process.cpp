@@ -48,7 +48,8 @@ LIBECS_DM_CLASS( CK_Process, ContinuousProcess )
 	{
 	  Real _SizeN_A = getSuperSystem()->getSizeN_A();
 
-	  Real VCK_maxf = VCK_maxr->getValue() * KCK_iATP * KCK_Cr * KCK_eq / KCK_iADP / KCK_PCr;
+	  Real VCK_maxf = VCK_maxr->getValue() / KCK_iATP / KCK_Cr / KCK_eq * KCK_iADP * KCK_PCr;
+	  //	  Real VCK_maxf = VCK_maxr->getValue() * KCK_iATP * KCK_Cr * KCK_eq / KCK_iADP / KCK_PCr; ducky 140414
 
 	  Real CK_a = VCK_maxr->getValue() * ATP->getMolarConc()*1000.0 * Cr->getMolarConc()*1000.0 / (KCK_iATP * KCK_Cr) - VCK_maxf * ADP->getMolarConc()*1000.0 * PCr->getMolarConc()*1000.0 / (KCK_iADP * KCK_PCr);
 

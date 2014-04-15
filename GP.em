@@ -37,6 +37,7 @@
 			[ frac_a     	:.:frac_a      0 ]
 			[ frac_b     	:.:frac_b      0 ]
 			[ GLY           :.:GLY         0 ]
+#			[ GLY           :.:GLY        -1 ]
 #			[ Pi            :.:PiTotal    -1 ]
 			[ Pi            :.:Pi         -1 ]
 			[ AMP           :.:AMP         0 ]
