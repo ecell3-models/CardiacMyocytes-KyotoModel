@@ -36,13 +36,14 @@ LIBECS_DM_CLASS( IKurAssignmentProcess, Process )
 		v_iur = getVariableReference( "v_iur" ).getVariable();
 		GX    = getVariableReference( "GX" ).getVariable();
     Cm    = getVariableReference( "Cm" ).getVariable();
+    I     = getVariableReference( "I" ).getVariable();
 	}
 
 	virtual void fire()
 	{
 		_v       = Vm->getValue() - EK->getValue();
 
-    I->setValue( ( GX->getValue() * g * aur->getValue() * iur->getValue() * _v * Cm->getValue() );
+    I->setValue( ( GX->getValue() * g * aur->getValue() * iur->getValue() * _v * Cm->getValue() ) );
 
 		_aur_inf = 1.0 / ( 1.0 + exp( -( Vm->getValue() + 6.0 )/ 8.6 ));
     _iur_inf = 1.0 / ( 1.0 + exp( ( Vm->getValue() + 7.5 )/ 10.0 ));
@@ -64,6 +65,7 @@ LIBECS_DM_CLASS( IKurAssignmentProcess, Process )
 	Variable* v_iur;
 	Variable* GX;
   Variable* Cm;
+  Variable* I;
 
 	Real g;
 
