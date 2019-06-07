@@ -12,11 +12,11 @@ IKur_I = 0.0
 
 IKur_g = {
 	"V"   : 0.0,
+	"A"   : 1.0,
 	"EMB" : 0.0,
 	"LAT" : 0.0,
 	"NEO" : 0.0,
 	"SAN" : 0.0,
-	"A"   : 1.0,
 }
 
 }
@@ -40,15 +40,15 @@ System System(/CELL/MEMBRANE/IKur)
 		Value 0.0;
 	}
 
-		Variable Variable( v_aur )
-		{
-			Value 0.0;
-		}
+	Variable Variable( v_aur )
+	{
+		Value 0.0;
+	}
 
-		Variable Variable( v_iur )
-		{
-			Value 0.0;
-		}
+	Variable Variable( v_iur )
+	{
+		Value 0.0;
+	}
 
 	Variable Variable( GX ){
 		Value @( Kv1_5[SimulationMode]);
@@ -66,11 +66,11 @@ System System(/CELL/MEMBRANE/IKur)
 			[ iur    :.:iur     0 ]
 			[ v_aur  :.:v_aur   1 ]
 			[ v_iur  :.:v_iur   1 ]
-			[ GX     :..:GX     0 ]
+			[ GX     :.:GX      0 ]
 			[ Cm     :..:Cm     0 ]
 			[ I      :.:I       1 ];
 
-		g        @IKur_g;
+		g   @( IKur_g[SimulationMode]);
 	}
 
 
@@ -83,14 +83,14 @@ System System(/CELL/MEMBRANE/IKur)
 			[ v_aur :.:v_aur  0 ];
 	}
 
-		Process ZeroVariableAsFluxProcess( i_aur )
-		{
-			Priority	15;
+	Process ZeroVariableAsFluxProcess( v_iur )
+	{
+		Priority	15;
 
-			VariableReferenceList
-				[ iur   :.:iur    1 ]
-				[ i_aur :.:i_aur  0 ];
-		}
+		VariableReferenceList
+			[ iur   :.:iur    1 ]
+			[ v_iur :.:v_iur  0 ];
+	}
 
 	@setCurrents( [ 'I' ], [ 'K', 'I' ] )
 

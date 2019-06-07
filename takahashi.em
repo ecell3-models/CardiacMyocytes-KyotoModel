@@ -144,6 +144,16 @@ Kir2_1 = {
 	"SAN" : 1.0
 }
 
+#IKur
+Kv1_5 = {
+	"V"   : 0.0,
+	"A"   : 1.0,
+	"EMB" : 0.0,
+	"LAT" : 0.0,
+	"NEO" : 0.0,
+	"SAN" : 0.0	
+}
+
 #IKr
 erg1 = {
 	"V"   : 1.0,
@@ -1925,6 +1935,7 @@ System System( /CELL/CYTOPLASM/SEPARATOR )
 @include( 'ICaT.em' )    @#        Ca
 @include( 'Ist.em' )     @# Na, K
 @include( 'IK1.em' )     @#     K
+@include( 'IKur.em' )    @#     K
 @include( 'IKr.em' )     @#     K
 @include( 'IKs.em' )     @# Na, K
 @include( 'Ito.em' )     @# Na, K
