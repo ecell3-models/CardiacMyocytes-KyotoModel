@@ -42,7 +42,7 @@ LIBECS_DM_CLASS( IKurAssignmentProcess, Process )
 	{
 		_v       = Vm->getValue() - EK->getValue();
 
-    I->setValue( ( GX->getValue() * g * aur->getValue() * iur->getValue() * _v * Cm->getValue() * _pOpen );
+    I->setValue( ( GX->getValue() * g * aur->getValue() * iur->getValue() * _v * Cm->getValue() );
 
 		_aur_inf = 1.0 / ( 1.0 + exp( -( Vm->getValue() + 6.0 )/ 8.6 ));
     _iur_inf = 1.0 / ( 1.0 + exp( ( Vm->getValue() + 7.5 )/ 10.0 ));
