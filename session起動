@@ -1,0 +1,14 @@
+takahashinokonoMacBook-puro:CardiacMyocytes-KyotoModel nonoko10151998$ ecell3-session run4_session.py
+t= 	0.0
+Vm:Value= 	-86.7286939421
+Vm:MolarConc= 	-1.12512876272e-14
+
+
+run 1000 sec.
+
+t= 	10000.0
+Vm:Value= 	-83.9040961835
+Vm:MolarConc= 	-1.08848534015e-14
+
+
+saving Atrial2.ecd..
