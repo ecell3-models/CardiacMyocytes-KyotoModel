@@ -51,8 +51,8 @@ LIBECS_DM_CLASS( IKurAssignmentProcess, Process )
     _tau_aur = 0.009 / ( 1.0 + exp( ( Vm->getValue() + 5.0 )/ 12.0 )) + 0.0005;
     _tau_iur = 0.59 / ( 1.0 + exp( ( Vm->getValue() + 60.0 )/ 10.0 )) + 3.05;
 
-		v_aur->setValue( (_aur_inf - aur->getValue() )/ _tau_aur );
-    v_iur->setValue( (_iur_inf - iur->getValue() )/ _tau_iur );
+		v_aur->setValue( (_aur_inf - aur->getValue() )/ _tau_aur / 1000.0 );
+    v_iur->setValue( (_iur_inf - iur->getValue() )/ _tau_iur / 1000.0 );
 	}
 
  protected:

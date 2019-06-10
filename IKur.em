@@ -12,7 +12,7 @@ IKur_I = 0.0
 
 IKur_g = {
 	"V"   : 0.0,
-	"A"   : 1.0,
+	"A"   : 2.5e-4,
 	"EMB" : 0.0,
 	"LAT" : 0.0,
 	"NEO" : 0.0,
@@ -32,12 +32,12 @@ System System(/CELL/MEMBRANE/IKur)
 
 	Variable Variable( aur )
 	{
-		Value 0.0;
+		Value 3.67e-4;
 	}
 
 	Variable Variable( iur )
 	{
-		Value 0.0;
+		Value 0.9673;
 	}
 
 	Variable Variable( v_aur )
